@@ -2,6 +2,23 @@
 
 Windows 资源管理器插件：对任意文件夹提供“在 DSH 中打开”——以该文件夹为工作区启动或进入 DeepSeek Harness。仅支持 Windows。
 
+## 安装 / 使用
+
+前置：Windows 10/11，已安装 DeepSeek Harness（提供 `dsh` 命令）。
+
+```bash
+# 把 web 换成你要安装的 profile 名（dsh profile 可查）
+dsh plugin --profile web add github:Ling-Ravers/DeepseekHarness-FastStart
+```
+
+安装完成后**重启一次 DSH**（新插件需重启加载），随后即可使用：
+
+- 资源管理器任意文件夹右键 → **在 DSH 中打开**：以该文件夹为工作区启动或进入 DSH
+- 系统托盘鲸鱼图标：唤起 web 端 / 退出
+- 设置页 → **dsh-open-in-dsh** 卡片：启用开关 / **彻底删除**
+
+彻底删除会一并移除右键菜单、托盘、日志与安装文件，并停止下次加载；需要再次使用时重复上面的安装命令即可（重装后自动以全新默认状态启用）。
+
 ## 功能介绍
 
 - **文件夹右键菜单“在 DSH 中打开”**：将根目录作为工作区并启动DSH web(默认关闭，需在设置中启动)
