@@ -1,0 +1,13 @@
+# dsh.bundle layer contributed by dsh-open-in-dsh.
+#
+# One insert row that mounts this plugin by its package name (Node module
+# resolution locates the built lib), so a profile that lists this bundle in
+# `dsh.profile.bundles` activates it automatically. Users override defaults in
+# their own profile/home patch by rewriting this row's `config`.
+- insert:
+    - id: dsh-shell-integration
+      name: 'dsh-open-in-dsh'
+      config:
+        origin: 'http://127.0.0.1:3080'
+        folderMenu: true
+        backgroundMenu: true
